@@ -1,16 +1,20 @@
-/*
+button:hover {
+    cursor: pointer;
+}
+
+
 header {
+    height: 150px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 section {   
 width: 100%;
-border: solid;
 display: flex;
 flex-direction: column;
 text-align: center;
-padding: 10% 25% 0% 25%;
+padding: 0 30% 0 30%;
 }
 section div {
     margin-top: 10px;
@@ -20,7 +24,45 @@ section button {
     border-radius: 25px;
     padding:10px;
 } 
-section button:hover {
-    cursor: pointer;
+
+
+
+/*
+.enterSchore {
+    display: flex;
+    justify-content: center;
+}
+.enterSchore .card {
+    border: solid;
+    width: 40%;
+
+}
+.card div {
+    display: flex;
+    align-items: baseline;
+}
+.enterSchore input {
+    margin: 0 10px 0 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 2px 5px 2px 5px;
+    width: 250px;
+}
+.enterSchore button {
+    width: 100px;
+    border-radius: 25px;
+    padding:5px;
+}
+*/
+
+/*
+.hightSchore {
+    border: solid;
+    display: flex;
+    justify-content: center;
+      
+}
+.hightSchore div {
+border: solid;
 }
 */

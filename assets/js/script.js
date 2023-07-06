@@ -1,8 +1,10 @@
 var timeEl = document.querySelector(".timer");
+var buttonEl = document.querySelector("button");
 
 var secondLeft = 50;
 
 function setTime() {
+  
     var timerInterval = setInterval(function() {
         secondLeft--;
         timeEl.textContent = "Time: " + secondLeft;
@@ -13,4 +15,4 @@ function setTime() {
     }, 1000);
 }
 
-setTime();
+buttonEl.addEventListener("click", setTime);

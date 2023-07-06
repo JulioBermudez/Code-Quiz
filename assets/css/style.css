@@ -1,0 +1,26 @@
+/*
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+section {   
+width: 100%;
+border: solid;
+display: flex;
+flex-direction: column;
+text-align: center;
+padding: 10% 25% 0% 25%;
+}
+section div {
+    margin-top: 10px;
+}
+section button {
+    width: 150px;
+    border-radius: 25px;
+    padding:10px;
+} 
+section button:hover {
+    cursor: pointer;
+}
+*/

@@ -1,18 +1,18 @@
-var timeEl = document.querySelector(".timer");
-var buttonEl = document.querySelector("button");
+var btnStartEl = document.querySelector("#btnStart");
+var timerEl = document.querySelector("#timer")
 
-var secondLeft = 50;
+var secondsLeft = 50
 
-function setTime() {
-  
-    var timerInterval = setInterval(function() {
-        secondLeft--;
-        timeEl.textContent = "Time: " + secondLeft;
+btnStartEl.addEventListener("click", start );
 
-        if (secondLeft === 0) {
+function start(){
+    var timerInterval = setInterval(function(){
+        secondsLeft--;
+        timerEl.textContent = secondsLeft + " Seconds Left";
+        if (secondsLeft === 0) {
             clearInterval(timerInterval);
+            //Time out missing code here
         }
-    }, 1000);
+    },1000)
 }
 
-buttonEl.addEventListener("click", setTime);

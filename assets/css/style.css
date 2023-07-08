@@ -1,68 +1,69 @@
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-
-
+section {
+  display: flex;
+  justify-content: center;
+}
+/*Header*/
 header {
-    height: 150px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  padding: 5px;
 }
-section {   
-width: 100%;
-display: flex;
-flex-direction: column;
-text-align: center;
-padding: 0 30% 0 30%;
+/*First container (Start)*/
+.container h1 {
+  text-align: center;
+  margin: 0px 10px 10px 10px;
 }
-section div {
-    margin-top: 10px;
-}
-section button {
-    width: 150px;
-    border-radius: 25px;
-    padding:10px;
-} 
 
+#startContainer, #questions{
+  border: solid ;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 300px;
+  width: 40%;
+  padding: 40px;
+  text-align: center;
+}
+#start-container div {
+  text-align: center;
+}
 
-
-/*
-.enterSchore {
-    display: flex;
-    justify-content: center;
+#btnStart {
+  width: 120px;
+  padding: 4px;
+  border-radius: 20px;
+  border-style: none;
 }
-.enterSchore .card {
-    border: solid;
-    width: 40%;
-
+/* Second Container (Questions Quitz)*/
+#questions {
+  padding: 0;
 }
-.card div {
-    display: flex;
-    align-items: baseline;
+#questions p {
+padding: 40px 40px 0px 40px;
 }
-.enterSchore input {
-    margin: 0 10px 0 10px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    padding: 2px 5px 2px 5px;
-    width: 250px;
+#questions button {
+  border: none;
+  border-radius: 20px;
+  width: 40%;
+  height: 50px;
 }
-.enterSchore button {
-    width: 100px;
-    border-radius: 25px;
-    padding:5px;
+#answerDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 20px;
 }
-*/
-
-/*
-.hightSchore {
-    border: solid;
-    display: flex;
-    justify-content: center;
-      
+/*-----------Hide ID-----------*/
+#startContainer {
+  display: ;
 }
-.hightSchore div {
-border: solid;
+#questions {
+  display: none;
 }
-*/
+/*--------------------------------*/

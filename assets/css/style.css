@@ -12,6 +12,15 @@ header {
   height: 100px;
   padding: 5px;
 }
+/*Correct or Wrong Answer Colors*/
+.btn-correct {
+  background-color:aquamarine
+}
+.btn-wrong {
+  background-color: brown;
+}
+
+
 /*First container (Start)*/
 .container h1 {
   text-align: center;
@@ -43,7 +52,10 @@ header {
   padding: 0;
 }
 #questions p {
-padding: 40px 40px 0px 40px;
+  font-size: 140%;
+  width: 100%;
+  height: 120px;
+padding: 30px 40px 10px 40px;
 }
 #questions button {
   border: none;
@@ -59,9 +71,13 @@ padding: 40px 40px 0px 40px;
   justify-content: space-evenly;
   padding-top: 20px;
 }
-/*-----------Hide ID-----------*/
+/*-----------Hide-----------*/
 
 #questions {
   display: none;
 }
+.hideQuestions {
+  display: none;
+}
 /*--------------------------------*/
+

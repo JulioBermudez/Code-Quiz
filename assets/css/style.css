@@ -71,12 +71,41 @@ padding: 30px 40px 10px 40px;
   justify-content: space-evenly;
   padding-top: 20px;
 }
+/*Third Container (Initials)*/
+
+#btnDiv {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0 10px 0; 
+}
+#initials button {
+width: 100px;
+border-radius: 20px;
+border-style: none;
+padding: 10px;
+}
+#initials h2 {
+  width: 100%;
+}
+#text {
+  margin: 10px;
+  padding: 10px;
+  border-style:dashed;
+  resize: none;
+  
+}
+
+
+
 /*-----------Hide-----------*/
 
 #questions {
   display: none;
 }
 .hideQuestions {
+  display: none;
+}
+#initials {
   display: none;
 }
 /*--------------------------------*/

@@ -13,35 +13,53 @@
       <h1>View High Schores:</h1>
       <h1 id="timer"></h1>
     </header>
-    
-<!--------------Start Container----------------->
+
+    <!--------------Start Container----------------->
     <section class="container">
       <div id="startContainer">
         <h1>Coding JavaScript Challenge</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quae adipisci, nostrum eius aspernatur eaque alias repellendus pariatur totam eum! Voluptatem nisi in reiciendis nostrum a unde deserunt asperiores corporis.</p>
-        <br>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+          quae adipisci, nostrum eius aspernatur eaque alias repellendus
+          pariatur totam eum! Voluptatem nisi in reiciendis nostrum a unde
+          deserunt asperiores corporis.
+        </p>
+        <br />
         <div>
-        <button id="btnStart">Start Quiz</button>
+          <button id="btnStart">Start Quiz</button>
+        </div>
       </div>
-      </div>
-
     </section>
-    
-<!--------------Questions Container----------------->
+
+    <!--------------Questions Container----------------->
     <section class="contQuestions">
       <div id="questions" class="hideQuestions">
         <div>
-        <p id="questionPar"></p>
-      </div>
-       <div id="answerDiv">
-        <button class="answers" id="answer1"></button>
-        <button class="answers" id="answer2"></button>
-        <button class="answers" id="answer3"></button>
-        <button class="answers" id="answer4"></button>
-       </div>
+          <p id="questionPar"></p>
+        </div>
+        <div id="answerDiv">
+          <button class="answers" id="answer1"></button>
+          <button class="answers" id="answer2"></button>
+          <button class="answers" id="answer3"></button>
+          <button class="answers" id="answer4"></button>
+        </div>
       </div>
     </section>
 
-<script src="./assets/js/script.js"></script>
+    <section class="container">
+      <div id="initials">
+        <h2>Your Schore is: <span>#</span></h2>
+        <br>
+        <div id="textarea">
+          <h3>Enter your initials here:</h3>
+          <textarea name="initials" id="text" cols="30" rows="1"></textarea>
+          <div id="btnDiv">
+            <button id="submitBtn" type="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

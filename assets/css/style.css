@@ -14,12 +14,11 @@ header {
 }
 /*Correct or Wrong Answer Colors*/
 .btn-correct {
-  background-color:aquamarine
+  background-color: aquamarine;
 }
 .btn-wrong {
   background-color: brown;
 }
-
 
 /*First container (Start)*/
 .container h1 {
@@ -27,8 +26,9 @@ header {
   margin: 0px 10px 10px 10px;
 }
 
-#startContainer, #questions{
-  border: solid ;
+#startContainer,
+#questions {
+  border: solid;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -55,7 +55,7 @@ header {
   font-size: 140%;
   width: 100%;
   height: 120px;
-padding: 30px 40px 10px 40px;
+  padding: 30px 40px 10px 40px;
 }
 #questions button {
   border: none;
@@ -76,13 +76,13 @@ padding: 30px 40px 10px 40px;
 #btnDiv {
   width: 100%;
   text-align: center;
-  margin: 10px 0 10px 0; 
+  margin: 10px 0 10px 0;
 }
 #initials button {
-width: 100px;
-border-radius: 20px;
-border-style: none;
-padding: 10px;
+  width: 100px;
+  border-radius: 20px;
+  border-style: none;
+  padding: 10px;
 }
 #initials h2 {
   width: 100%;
@@ -90,23 +90,17 @@ padding: 10px;
 #text {
   margin: 10px;
   padding: 10px;
-  border-style:dashed;
+  border-style: dashed;
   resize: none;
-  
 }
-
-
 
 /*-----------Hide-----------*/
 
-#questions {
+#questions,
+.hideQuestions,
+#initials,
+#finalScore {
   display: none;
 }
-.hideQuestions {
-  display: none;
-}
-#initials {
-  display: none;
-}
-/*--------------------------------*/
 
+/*--------------------------------*/

@@ -7,6 +7,10 @@ var questionParEl = document.querySelector("#questionPar");
 var initialsEl = document.querySelector("#initials");
 var submitBtnEl = document.querySelector("#submitBtn");
 var textEl = document.querySelector("#text");
+var scoreEl = document.querySelector("#score");
+var finalScoreEl = document.querySelector("#finalScore");
+var textareaEl = document.querySelector("#textarea");
+var olScoreEl = document.querySelector("#olScore");
 var answer1El = document.querySelector("#answer1");
 var answer2El = document.querySelector("#answer2");
 var answer3El = document.querySelector("#answer3");
@@ -66,18 +70,7 @@ var questions = [
   },
 ];
 
-/*----------------Start the Count Down------------------------*/
-function timerCountDown() {
-  var timerInterval = setInterval(function () {
-    secondsLeft--;
-    timerEl.textContent = secondsLeft + " Seconds Left";
-    if (secondsLeft === 0) {
-      clearInterval(timerInterval);
-      //When time runs out something happend missing code here
-    }
-  }, 1000);
-}
-/*------------------------------------------------------------*/
+
 
 //Hide the Start Container and Show the Questions Container
 function displayQuestions() {
@@ -111,6 +104,19 @@ function displayQuestions() {
   hideQuestionsEl.addEventListener("click", nextQuestion);
 }
 
+/*----------------Start the Count Down------------------------*/
+function timerCountDown() {
+  var timerInterval = setInterval(function () {
+    secondsLeft--;
+    timerEl.textContent = secondsLeft + " Seconds Left";
+    if (secondsLeft === 0) {
+      clearTimeout(timerInterval);
+      //When time runs out something happend missing code here
+    }
+  }, 1000);
+}
+/*------------------------------------------------------------*/
+
 function nextQuestion(event) {
   var currentElement = event.target;
   if (currentElement.matches("button")) {
@@ -122,16 +128,30 @@ function nextQuestion(event) {
 //This if says that when questions are done its going to call the function initials
     if (questionIndex === 5) {
       hideQuestionsEl.setAttribute("style", "display: none");
-      initialsFunction();
+      scoreEl.textContent = secondsLeft;
+      timerEl.setAttribute("style", "display: none")
+      initialsEl.setAttribute("style", "display: block");
       return
     }
     displayQuestions();
   }
 }
 
+// this function print the score 
 function initialsFunction() {
-  initialsEl.setAttribute("style", "display: block");
+  initialsEl.setAttribute("style", "display: none");
+finalScoreEl.setAttribute("style","display: block")
+  
+  var textValue = textEl.value
+ if (textValue !== null) {
+var li = document.createElement("li");
+var node = document.createTextNode(textValue);
+li.appendChild(node);
+olScoreEl.appendChild(li);
+ }
+
 }
 
 btnStartEl.addEventListener("click", timerCountDown);
 btnStartEl.addEventListener("click", displayQuestions);
+submitBtnEl.addEventListener("click", initialsFunction)

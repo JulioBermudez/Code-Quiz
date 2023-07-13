@@ -10,7 +10,9 @@ var textEl = document.querySelector("#text");
 var scoreEl = document.querySelector("#score");
 var finalScoreEl = document.querySelector("#finalScore");
 var textareaEl = document.querySelector("#textarea");
+var startAgainEl = document.querySelector("#startAgain");
 var olScoreEl = document.querySelector("#olScore");
+var clearHighScoreEl = document.querySelector("#clearHighScore");
 var answer1El = document.querySelector("#answer1");
 var answer2El = document.querySelector("#answer2");
 var answer3El = document.querySelector("#answer3");
@@ -70,8 +72,6 @@ var questions = [
   },
 ];
 
-
-
 //Hide the Start Container and Show the Questions Container
 function displayQuestions() {
   hideStartEl.setAttribute("style", "display:none");
@@ -102,6 +102,7 @@ function displayQuestions() {
 
   //If you make click in the childrens of answerDiv is going to next question
   hideQuestionsEl.addEventListener("click", nextQuestion);
+  return;
 }
 
 /*----------------Start the Count Down------------------------*/
@@ -125,33 +126,47 @@ function nextQuestion(event) {
     if (currentElement.getAttribute("data-correct") === "false") {
       secondsLeft = secondsLeft - 10;
     }
-//This if says that when questions are done its going to call the function initials
+    //This if says that when questions are done its going to call the function initials
     if (questionIndex === 5) {
       hideQuestionsEl.setAttribute("style", "display: none");
       scoreEl.textContent = secondsLeft;
-      timerEl.setAttribute("style", "display: none")
+      timerEl.setAttribute("style", "display: none");
       initialsEl.setAttribute("style", "display: block");
-      return
+      return;
     }
     displayQuestions();
   }
 }
 
-// this function print the score 
+// this function print the score
 function initialsFunction() {
   initialsEl.setAttribute("style", "display: none");
-finalScoreEl.setAttribute("style","display: block")
-  
-  var textValue = textEl.value
- if (textValue !== null) {
-var li = document.createElement("li");
-var node = document.createTextNode(textValue);
-li.appendChild(node);
-olScoreEl.appendChild(li);
- }
+  finalScoreEl.setAttribute("style", "display: block");
+  var todos = [];
+  var textValue = textEl.value.trim();
 
+  if (textValue !== null) {
+    localStorage.setItem("initials", JSON.stringify(textValue));
+    todos.push(textValue);
+    var li = document.createElement("li");
+    var node = document.createTextNode(todos);
+    li.appendChild(node);
+    olScoreEl.appendChild(li);
+
+    startAgainEl.addEventListener("click", function startAgain() {
+      hideStartEl.setAttribute("style", "display: flex");
+      finalScoreEl.setAttribute("style", "display: none");
+      questionIndex = 0;
+      secondsLeft = 75;
+      timerCountDown()
+    });
+
+    clearHighScoreEl.addEventListener("click", function () {
+      node.remove();
+    });
+  }
 }
 
 btnStartEl.addEventListener("click", timerCountDown);
 btnStartEl.addEventListener("click", displayQuestions);
-submitBtnEl.addEventListener("click", initialsFunction)
+submitBtnEl.addEventListener("click", initialsFunction);

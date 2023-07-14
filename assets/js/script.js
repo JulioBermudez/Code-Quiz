@@ -25,49 +25,49 @@ var questionIndex = 0;
 //Array that has all the questions inside
 var questions = [
   {
-    question: "Question 1",
+    question: "Inside which HTML element do we put the JavaScript?",
     answers: [
-      { text: "answer 1 false", correct: false },
-      { text: "answer 2 false", correct: false },
-      { text: "answer 3 true", correct: true },
-      { text: "answer 4 false", correct: false },
+      { text: "<javascript>", correct: false },
+      { text: "<js>", correct: false },
+      { text: "<script>", correct: true },
+      { text: "<scripting>", correct: false },
     ],
   },
 
   {
-    question: "Question 2",
+    question: "Where is the correct place to insert a JavaScript?",
     answers: [
-      { text: "answer 1 false", correct: false },
-      { text: "answer 2 false", correct: true },
-      { text: "answer 3 true", correct: false },
-      { text: "answer 4 false", correct: false },
+      { text: "The <head> and <body> section", correct: false },
+      { text: "The <body> section", correct: true },
+      { text: "The <head> section", correct: false },
+      { text: "The <footer> section", correct: false },
     ],
   },
   {
-    question: "Question 3",
+    question: "How do you write Hello World in an alert box?",
     answers: [
-      { text: "answer 1 false", correct: false },
-      { text: "answer 2 false", correct: false },
-      { text: "answer 3 true", correct: false },
-      { text: "answer 4 false", correct: true },
+      { text: "msg(Hello World)", correct: false },
+      { text: "msgBox(Hello World)", correct: false },
+      { text: "alertBox(Hello World)", correct: false },
+      { text: "alert(Hello World)", correct: true },
     ],
   },
   {
-    question: "Question 4",
+    question: "How to write an IF statement in JavaScript?",
     answers: [
-      { text: "answer 1 false", correct: true },
-      { text: "answer 2 false", correct: false },
-      { text: "answer 3 true", correct: false },
-      { text: "answer 4 false", correct: false },
+      { text: "if (i==5) then", correct: true },
+      { text: "if i==5 then", correct: false },
+      { text: "if i=5 then", correct: false },
+      { text: "if i=5 ", correct: false },
     ],
   },
   {
-    question: "Question 5",
+    question: "How to write an IF statement for executing some code if i is NOT equal to 5?",
     answers: [
-      { text: "answer 1 false", correct: false },
-      { text: "answer 2 false", correct: true },
-      { text: "answer 3 true", correct: false },
-      { text: "answer 4 false", correct: false },
+      { text: "if (i<>5)", correct: false },
+      { text: "if (i!=5)", correct: true },
+      { text: "if (i=!5) then", correct: false },
+      { text: "if i<>5", correct: false },
     ],
   },
 ];

@@ -24,6 +24,7 @@ header {
 .container h1 {
   text-align: center;
   margin: 0px 10px 10px 10px;
+  font-size: 200%;
 }
 
 #startContainer,
@@ -34,6 +35,7 @@ header {
   height: 300px;
   width: 40%;
   padding: 40px;
+  border-radius: 10px;
   text-align: center;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
@@ -43,9 +45,10 @@ header {
 
 #btnStart {
   width: 120px;
-  padding: 4px;
+  padding: 8px;
   border-radius: 20px;
   border-style: none;
+  margin-top: 20px;
   
 }
 /* Second Container (Questions Quitz)*/

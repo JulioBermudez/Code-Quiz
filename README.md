@@ -8,7 +8,7 @@ A Quiz Challenge to test your knowledge about coding
 This Quiz Challenge can test a person's knowledge and understanding of various concepts related to JavaScript programming language. It can include questions about data types, variables, control structures, functions, arrays, objects, loops, conditional statements, DOM manipulation, events, error handling, and other key JavaScript concepts. 
 
 ## Deployment Link
-
+https://juliobermudez.github.io/Code-Quiz/
 
 👆Click Here 👆
 

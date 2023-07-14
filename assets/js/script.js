@@ -112,8 +112,10 @@ function timerCountDown() {
     timerEl.textContent = secondsLeft + " Seconds Left";
     if (secondsLeft === 0) {
       clearTimeout(timerInterval);
+     
       //When time runs out something happend missing code here
     }
+    return;
   }, 1000);
 }
 /*------------------------------------------------------------*/
@@ -142,23 +144,25 @@ function nextQuestion(event) {
 function initialsFunction() {
   initialsEl.setAttribute("style", "display: none");
   finalScoreEl.setAttribute("style", "display: block");
-  var todos = [];
+ 
   var textValue = textEl.value.trim();
+  var allScoreData = JSON.parse(localStorage.getItem("highScore")) || [];
 
   if (textValue !== null) {
-    localStorage.setItem("initials", JSON.stringify(textValue));
-    todos.push(textValue);
+    var newScore = {
+      initials: textValue,
+      score: secondsLeft,
+    };
+    allScoreData.push(newScore);
+    localStorage.setItem("highScore", JSON.stringify(allScoreData));
+
     var li = document.createElement("li");
-    var node = document.createTextNode(todos);
+    var node = document.createTextNode(textValue);
     li.appendChild(node);
     olScoreEl.appendChild(li);
 
     startAgainEl.addEventListener("click", function startAgain() {
-      hideStartEl.setAttribute("style", "display: flex");
-      finalScoreEl.setAttribute("style", "display: none");
-      questionIndex = 0;
-      secondsLeft = 75;
-      timerCountDown()
+      location.reload()
     });
 
     clearHighScoreEl.addEventListener("click", function () {

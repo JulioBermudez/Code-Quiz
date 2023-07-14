@@ -159,9 +159,11 @@ function initialsFunction() {
     localStorage.setItem("highScore", JSON.stringify(allScoreData));
 
     var li = document.createElement("li");
-    var node = document.createTextNode(textValue);
+    var node = document.createTextNode(textValue + " ------ " + scoreEl.textContent + " points");
     li.appendChild(node);
     olScoreEl.appendChild(li);
+
+   
 
     startAgainEl.addEventListener("click", function startAgain() {
       location.reload()
@@ -169,10 +171,11 @@ function initialsFunction() {
 
     clearHighScoreEl.addEventListener("click", function () {
       node.remove();
+      olScoreEl.setAttribute("style", "list-style: none;")
     });
   }
 }
 
 btnStartEl.addEventListener("click", timerCountDown);
 btnStartEl.addEventListener("click", displayQuestions);
-
+submitBtnEl.addEventListener("click", initialsFunction)

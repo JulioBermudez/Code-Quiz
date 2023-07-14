@@ -1,4 +1,4 @@
-button:hover {
+button:hover, header h1:hover {
   cursor: pointer;
 }
 section {
@@ -12,6 +12,15 @@ header {
   height: 100px;
   padding: 5px;
 }
+header h1 {
+  width: 50%;
+  height: 30px;
+  font-size: 150%;
+}
+header h2 {
+  font-size: 150%;
+}
+
 /*Correct or Wrong Answer Colors*/
 .btn-correct {
   background-color: aquamarine;
@@ -90,6 +99,7 @@ header {
 }
 #initials h2 {
   width: 100%;
+  font-size: 120%;
 }
 #text {
   margin: 10px;

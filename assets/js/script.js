@@ -18,6 +18,7 @@ var answer2El = document.querySelector("#answer2");
 var answer3El = document.querySelector("#answer3");
 var answer4El = document.querySelector("#answer4");
 
+
 //Variables
 var secondsLeft = 75;
 var questionIndex = 0;
@@ -107,15 +108,15 @@ function displayQuestions() {
 
 /*----------------Start the Count Down------------------------*/
 function timerCountDown() {
-  var timerInterval = setInterval(function () {
+   timerInterval = setInterval(function () {
     secondsLeft--;
     timerEl.textContent = secondsLeft + " Seconds Left";
-    if (secondsLeft === 0) {
+    if (secondsLeft <= 0) {
       clearTimeout(timerInterval);
-     
+      return;
       //When time runs out something happend missing code here
     }
-    return;
+    
   }, 1000);
 }
 /*------------------------------------------------------------*/
@@ -129,9 +130,10 @@ function nextQuestion(event) {
       secondsLeft = secondsLeft - 10;
     }
     //This if says that when questions are done its going to call the function initials
-    if (questionIndex === 5) {
+    if (questionIndex === 5 ) {
       hideQuestionsEl.setAttribute("style", "display: none");
-      scoreEl.textContent = secondsLeft;
+      clearInterval(timerInterval)
+      scoreEl.textContent = secondsLeft * 3;
       timerEl.setAttribute("style", "display: none");
       initialsEl.setAttribute("style", "display: block");
       return;
@@ -173,4 +175,4 @@ function initialsFunction() {
 
 btnStartEl.addEventListener("click", timerCountDown);
 btnStartEl.addEventListener("click", displayQuestions);
-submitBtnEl.addEventListener("click", initialsFunction);
+
